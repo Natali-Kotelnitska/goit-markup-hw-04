@@ -94,12 +94,15 @@ body {
 }
 
 /* СЕКЦИЯ HEADER */
+.page-header {
+  border-bottom: 1px solid var(--header-line-color);
+}
+
 .flex-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--primary-white-color);
-  border-bottom: 1px solid var(--header-line-color);
 }
 
 /* LOGO */
@@ -113,6 +116,8 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
 
+  padding-top: 24px;
+  padding-bottom: 25px;
   margin-right: 93px;
 }
 
@@ -173,7 +178,7 @@ body {
 
 .contact-list .tel,
 .contact-list .email {
-  display: block;
+  display: flex;
   color: inherit;
 
   font-weight: 500;
@@ -279,6 +284,9 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.feauture-description {
+  padding-top: var(--card-set-gap);
+}
 
 .feature-list {
   display: flex;
@@ -308,7 +316,6 @@ body {
   height: 120px;
 
   padding: 25px 100px;
-  margin-bottom: var(--card-set-gap);
   background: var(--button-bgr-color);
   border-radius: 4px;
 }
@@ -411,20 +418,20 @@ body {
   margin-right: var(--card-set-gap);
 }
 .clients-list .link {
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
 
   width: 100%;
   height: 100%;
-  padding: 16px 32px;
 
   fill: var(--social-icons-color);
 
   border: 1px solid var(--social-icons-color);
   border-radius: 4px;
 }
-.clients-list .link:hover {
+.clients-list .link:hover,
+.clients-list .link:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -517,6 +524,10 @@ body {
 .filter-buttons > .margin:not(:last-child) {
   margin-right: 8px;
 }
+.filter-buttons .accent {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
 
 .button.secondary {
   padding: 6px 22px;
@@ -582,7 +593,8 @@ body {
   line-height: 1.87;
   color: var(--primary-text-color);
 }
-.cards-set .card-link:hover {
+.cards-set .card-link:hover,
+.cards-set .card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
