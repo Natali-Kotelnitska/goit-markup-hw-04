@@ -68,6 +68,7 @@ body {
 .icons-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 
   display: flex;
   width: 206px;
@@ -116,11 +117,12 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
 
-  padding-top: 24px;
-  padding-bottom: 25px;
   margin-right: 93px;
 }
-
+.logo-paddings {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
 .logo-header {
   color: var(--primary-black-color);
 }
@@ -171,14 +173,15 @@ body {
   margin-left: auto;
 }
 .contact-list .link {
-  display: block;
+  display: flex;
+  align-items: center;
+
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
 .contact-list .tel,
 .contact-list .email {
-  display: flex;
   color: inherit;
 
   font-weight: 500;
@@ -285,7 +288,7 @@ body {
   overflow: hidden;
 }
 .feauture-description {
-  padding-top: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
 .feature-list {
@@ -312,10 +315,13 @@ body {
 }
 /* Иконки */
 .feature-list .icon-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 270px;
   height: 120px;
 
-  padding: 25px 100px;
   background: var(--button-bgr-color);
   border-radius: 4px;
 }
